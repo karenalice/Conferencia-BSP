@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extrator BSP (TXT) – Web</title>
+  <link rel="stylesheet" href="hotestilo.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./fatura.html">Fatura BSP</a></li>
+                <li><a href="./hot.html" aria-current="page">HOT diário</a></li>
+                <li><a href="#">Fatura confere</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main class="container">
+    <section class="card">
+      <div class="controls">
+        <label class="file-label">
+          <input id="fileInput" type="file" accept="*" multiple />
+          Selecionar TXT(s)
+        </label>
+
+        <button id="btnProcessar" class="btn" disabled>Processar</button>
+        <button id="btnCsv" class="btn outline" disabled>Baixar CSV</button>
+      </div>
+
+      <div id="status" class="status">Nenhum arquivo carregado.</div>
+
+      <div class="table-wrap">
+        <table id="resultTable">
+          <thead id="thead"></thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <!-- <small>Feito para rodar 100% no navegador · Compatível com GitHub Pages</small> -->
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
+

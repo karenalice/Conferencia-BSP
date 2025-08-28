@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extrator BSP — Web</title>
+  <link rel="stylesheet" href="estilofatura.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- PDF.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <!-- SheetJS (XLSX) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.20.3/xlsx.full.min.js"></script>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./fatura.html" aria-current="page">Fatura BSP</a></li>
+                <li><a href="./hot.html">HOT diário</a></li>
+                <li><a href="#">Fatura confere</a></li>
+            </ul>
+        </nav>
+    </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>1) Importar PDF</h2>
+      <div class="uploader" id="dropZone">
+        <input type="file" id="fileInput" accept="application/pdf" />
+        <p>Arraste o PDF aqui ou clique para selecionar</p>
+      </div>
+
+      <div class="actions">
+        <button id="btnLer" class="btn primary" type="button" disabled>Ler PDF</button>
+        <button id="btnExportar" class="btn" type="button" disabled>Exportar Excel</button>
+      </div>
+
+      <div id="status" class="status">Nenhum arquivo selecionado.</div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <!-- <small>Pronto para GitHub Pages — suba estes 3 arquivos.</small> -->
+  </footer>
+
+  <script defer src="script.js"></script>
+</body>
+
+</html>
+
